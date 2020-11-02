@@ -11,9 +11,9 @@ struct GameSession: Codable {
     let date: Date
     let numberOfQuestions: Int
     let numberOfCorrectAnswers: Int
-    var percentagGuessed: Double{
+    var percentagGuessed: Int{
         let percentagGuessed = (Double(numberOfCorrectAnswers) * 100 / Double(numberOfQuestions))
-        return percentagGuessed
+        return Int(percentagGuessed)
     }
 }
 
