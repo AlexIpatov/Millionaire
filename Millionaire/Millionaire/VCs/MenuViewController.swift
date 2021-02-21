@@ -24,7 +24,6 @@ class MenuViewController: UIViewController {
                     let gameSession = GameSession(date: Date(), numberOfQuestions:numberQuestions, numberOfCorrectAnswers: score)
                      Game.shared.addSession(gameSession: gameSession)
                     self?.results.setTitle("Вы отгадали \(score) из \(numberQuestions) вопросов", for: .normal)
-                
                 }
             }
         
@@ -32,7 +31,6 @@ class MenuViewController: UIViewController {
             break
         }
     }
-    
     @IBAction func startButton(_ sender: UIButton) {
              performSegue(withIdentifier: "toGameVC", sender: self)
       
